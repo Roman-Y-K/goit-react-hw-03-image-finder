@@ -7,8 +7,7 @@ import Button from './Components/Button';
 import Modal from './Components/Modal';
 import Loader from 'react-loader-spinner';
 import Spinner from './Components/Spinner';
-
-// import styles from './styles.module.css';
+import './styles.css';
 
 class App extends Component {
   state = {
@@ -78,7 +77,7 @@ class App extends Component {
   render() {
     const { images, modal, modalImg, spinner } = this.state;
     return (
-      <div>
+      <div className="App">
         <SearchBar onSubmit={this.onChangeQuery} />
         <ImageGallery onClick={this.showModal}>
           <ImageGalleryItem images={images} />
